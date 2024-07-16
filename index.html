@@ -14,9 +14,10 @@
   }
 </style>
 <script>
-function unmuteAudio() {
+function playAndUnmuteAudio() {
   var audio = document.getElementById("myAudio");
-  audio.muted = false;
+  audio.muted = false;  // 取消静音
+  audio.play();  // 尝试播放音频
 }
 </script>
 </head>
@@ -25,6 +26,6 @@ function unmuteAudio() {
   <source src="xiaoshuang.MP3" type="audio/mpeg">
   您的浏览器不支持音频元素。
 </audio>
-<button onclick="unmuteAudio()">取消静音</button>
+<button onclick="playAndUnmuteAudio()">播放/取消静音</button>
 </body>
 </html>
